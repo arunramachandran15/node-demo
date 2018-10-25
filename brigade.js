@@ -4,6 +4,10 @@ events.on("exec", (e, project) => {
   console.log("exec hook fired");
 });
 
+events.on("myevent", function(e) {
+  console.log("===> Image push my event")
+})
+
 // This is for the local dev loop.
 events.on("image_push", (e, p) => {
   console.log(e.payload);
